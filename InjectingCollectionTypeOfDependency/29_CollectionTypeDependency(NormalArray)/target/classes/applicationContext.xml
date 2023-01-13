@@ -1,0 +1,62 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context = "http://www.springframework.org/schema/context"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+   <context:annotation-config/>
+   <!-- bean definitions go here -->
+
+<bean id="p1" class="com.masai.Product">
+<constructor-arg name="id" value="1" />
+<constructor-arg  name="name" value="Shirt"/>
+<constructor-arg name="price" value="5000" />
+</bean>
+
+<bean id="p2" class="com.masai.Product">
+<constructor-arg name="id" value="2" />
+<constructor-arg  name="name" value="Pen"/>
+<constructor-arg name="price" value="250" />
+</bean>
+
+
+<bean id="p3" class="com.masai.Product">
+<constructor-arg name="id" value="3" />
+<constructor-arg  name="name" value="Toy"/>
+<constructor-arg name="price" value="3500" />
+</bean>
+
+
+<bean id="p4" class="com.masai.Product">
+<constructor-arg name="id" value="4" />
+<constructor-arg  name="name" value="Calculator"/>
+<constructor-arg name="price" value="500" />
+</bean>
+
+<bean id="p5" class="com.masai.Product">
+<constructor-arg name="id" value="5" />
+<constructor-arg  name="name" value="laptop"/>
+<constructor-arg name="price" value="50000" />
+</bean>
+   
+  
+  <bean id="o1" class="com.masai.Order">
+  <property name="id" value="1"/>
+  <property name="address" value="Mumbai"/>
+  <property name="products">
+  <list>
+      <ref bean="p1"/>
+      <ref bean="p2"/>
+      <ref bean="p3"/>
+      <ref bean="p4"/>
+      <ref bean="p5"/>
+  </list>
+  
+  </property>
+  </bean> 
+   
+</beans>

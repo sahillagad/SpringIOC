@@ -1,0 +1,73 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context = "http://www.springframework.org/schema/context"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+   <context:annotation-config/>
+   <!-- bean definitions go here -->
+
+<bean id="p1" class="com.masai.Person"  >
+<property name="name" value="sahil"/>
+<property name="address" value="Kalyan"/>
+<property name="pincode" value="421301"/>
+</bean>
+
+ <bean id="p2" class="com.masai.Person"   >
+<property name="name" value="Ram"/>
+<property name="address" value="Nashik"/>
+<property name="pincode" value="422301"/>
+</bean>
+
+
+<bean id="p3" class="com.masai.Person"   >
+<property name="name" value="Pramila"/>
+<property name="address" value="Mumbai"/>
+<property name="pincode" value="444301"/>
+</bean>
+
+
+<bean id="p4" class="com.masai.Person"  >
+<property name="name" value="Bhaskar"/>
+<property name="address" value="Sinnar"/>
+<property name="pincode" value="664324"/>
+</bean>
+
+
+
+<bean id="HR" class="com.masai.Department">
+<property name="depid" value="1"/>
+<property name="name" value="HR"/>
+<property name="address" >
+  <list>
+      <value>Mumbai</value>
+       <value>Kalyan</value>
+        <value>Chennai</value>
+        <value>Pune</value>
+        <value>Nashik</value>
+ </list>
+
+</property>
+<property name="persons" >
+  <list>
+     <ref bean="p1"/>
+        <ref bean="p2"/>
+           <ref bean="p3"/>
+              <ref bean="p4"/>
+          
+              
+ </list>
+
+</property>
+
+
+</bean>
+
+  
+
+   
+</beans>
