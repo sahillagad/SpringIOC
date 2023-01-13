@@ -1,0 +1,36 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context = "http://www.springframework.org/schema/context"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+   <context:annotation-config/>
+   <!-- bean definitions go here -->
+
+<bean id="aobj" class="com.masai.A" init-method="initMethod" destroy-method="destroyMethod">
+<property name="className" value="A Class"/>
+</bean>
+  
+  <bean id="bobj" class="com.masai.B" init-method="initMethod" destroy-method="destroyMethod">
+<property name="className" value="B Class"/>
+</bean>
+
+<bean id="cobj" class="com.masai.C" init-method="initMethod" destroy-method="destroyMethod">
+<property name="className" value="C Class"/>
+</bean>
+
+
+<bean id="dobj" class="com.masai.D" init-method="initMethod" destroy-method="destroyMethod">
+<property name="className" value="D Class"/>
+</bean>
+   
+   
+   <bean id="eobj" class="com.masai.E" init-method="initMethod" destroy-method="destroyMethod">
+<property name="className" value="E Class"/>
+</bean>
+   
+</beans>

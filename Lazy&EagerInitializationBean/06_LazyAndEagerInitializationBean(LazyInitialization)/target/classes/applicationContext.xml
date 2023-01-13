@@ -1,0 +1,37 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:context = "http://www.springframework.org/schema/context"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+   <context:annotation-config/>
+   <!-- bean definitions go here -->
+
+   <bean  id="personObj" class="com.masai.Person" init-method="initMethod" destroy-method="distroymethod" lazy-init="true">
+   <property  name="id"    value="1"/>
+   <property  name="name"  value="Sahil"/>
+   <property  name="add"   value="Mumbai"/>
+   <property  name="marks" value="567"/>
+   </bean>
+   
+    <bean  id="HomeObj" class="com.masai.Home" init-method="initMethodHome" destroy-method="distroymethodHome" lazy-init="true">
+   <property  name="homeid"    value="88"/>
+   <property  name="homeName"  value="RamHome"/>
+   <property  name="add"   value="Nashik"/>
+   </bean>
+ 
+
+    <bean  id="departmentObj" class="com.masai.Department" init-method="initMethodDepartment" destroy-method="distroymethodDepartment" lazy-init="true">
+   <property  name="depId"    value="8"/>
+   <property  name="name"  value="IT"/>
+   <property  name="add"   value="Pune"/>
+   </bean>
+   
+   
+   
+   
+</beans>
